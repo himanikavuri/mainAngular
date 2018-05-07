@@ -1,120 +1,14 @@
-<div class="row">
-
-<nav class="navbar navbar-expand-lg navbar-fixed-left bg-dark col-md-1">
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="nav navbar-nav ">
-      <li class="nav-item active">
-        <a class="nav-link" uiSref="first">Home</a>
-        <a class="nav-link" uiSref="login">Login</a>
-        <a class="nav-link" uiSref="about">about</a>
-      </li>
-      <li class="nav-item">
-          <button type="button" class="btn btn-primary" (click)="open = !open" >Alert</button>
-        </li>
-        <li><br>
-            <button type="button" class="btn btn-primary" (click)="openModal(template)">Modal</button>
-            <ng-template #template>
-                <div class="modal-header">
-                  <h4 class="modal-title pull-left">Modal</h4>
-                  <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  This is a modal.
-                </div>
-              </ng-template>
-        </li>
-        <li><br>
-            <button class="btn btn-primary" (click)="dp.toggle()" [attr.aria-expanded]="dp.isOpen">Date</button>
-        </li>
-    </ul>
-  </div>
-</nav>
-<div class="container col-md-9">
-  <ui-view></ui-view>
-  <alert type="success" [isOpen] ="open">
-      <strong>Well done!</strong> You successfully read this important alert message.
-    </alert>
-    <rating [(ngModel)]="rate" [max]="max" [readonly]="isReadonly"></rating>
-    <input type="text"
-    placeholder="Datepicker"
-    class="form-control"
-    #dp="bsDatepicker"
-    bsDatepicker
-    [bsValue]="bsValue">
-    <br>
-    <accordion>
-        <accordion-group heading="Click here to check the class">
-          This is the Angular Demo class.
-        </accordion-group>
-        </accordion>
-        <br>
-        <button type="button" class="btn btn-primary" (click)="isCollapsed = !isCollapsed"
-        [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">Toggle collapse
-</button>
-<hr>
-<div id="collapseBasic" [collapse]="isCollapsed" class="card card-block card-header">
-  <div class="well well-lg">Welcome to demo class</div>
-</div>
-
-<br>
-<div class="btn-group" dropdown>
-    <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
-            aria-controls="dropdown-basic">
-      Button dropdown <span class="caret"></span>
-    </button>
-    <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
-        role="menu" aria-labelledby="button-basic">
-      <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
-      <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
-      <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
-      <li class="divider dropdown-divider"></li>
-      <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
-      </li>
-    </ul>
-    <br>
-  </div>
-  <button type="button" class="btn btn-primary"
-        popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-  Live demo
-</button>
-
-<div class="row">
-    <div class="col-sm-4">
-      <div class="mb-2">
-        <br>
-        <progressbar max="100" [value]="89" type="danger" [striped]="true" [animate]="true"><i>89 / 100</i></progressbar>
-      </div>
-    </div>
-  </div>  
-  <div>
-      <tabset>
-        <tab heading="HTML" id="tab1">Welcome to HTML class</tab>
-        <tab heading="CSS">Welcome to CSS class</tab>
-        <tab heading="JavaScript">Welcome to JavaScript class</tab>
-      </tabset>
-    </div>  
-    <br>
-    <timepicker [(ngModel)]="mytime"></timepicker>
-    <pre class="alert alert-info">Time is: {{mytime}}</pre>
-    <button type="button" class="btn btn-primary"
-        tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-  Simple demo
-</button>
- <p></p>
-<carousel>
-            <slide>
-              <img src="assets/images/1.jpg" alt="first slide" style="display: block; width: 100%;">
-            </slide>
-            <slide>
-              <img src="assets/images/2.jpg" alt="second slide" style="display: block; width: 100%;">
-            </slide>
-            <slide>
-              <img src="assets/images/3.jpg" alt="third slide" style="display: block; width: 100%;">
-            </slide>
-          </carousel>
-          <pagination [totalItems]="30"></pagination>
+<h3>Welcome to Login page</h3>
+<div>
+<form name="form_id" class="center">
+   <div class="container">
+    Username:  <input type="username" placeholder="Enter Username" id="username" ><br><br>
+    Password:  <input type="password" placeholder="Enter Password" id="psw">  
+ <p id ="error"></p>
   
-</div>
-</div>
+    <a  (click)="handleClick()">Login</a>
+   
+   </div>
+<ui-view></ui-view>
+ </form>
+
