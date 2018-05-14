@@ -19,28 +19,30 @@ import{TabsComponent}from './tabs/tabs.component';
 import { TimepickerComponent } from 'ngx-bootstrap';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { TypeaheadComponent } from './typeahead/typeahead.component';
+import { LogoutComponent } from './logout/logout.component';
 @NgModule({
   imports: [UIRouterModule.forRoot({
     states: [
-        {name: "first", url: "/first", component: FirstComponent},
+        {name: "about.first", url: "/first", component: FirstComponent},
         {name:"login",url:"/login",component:LoginComponent},
         {name:"about",url:"/about",component:AboutComponent},
-        {name:"alert",url:"/alert",component:AlertComponent},
-        {name:"accordion",url:"/accordion",component:AccordionComponent}, 
-        {name:"pagination",url:"/pagination",component:PaginationComponent},
-        {name:"rating",url:"/rating",component:RatingComponent},
-        {name:"button",url:"/button",component:ButtonComponent},
-        {name:"carousel",url:"/carousel",component:CarouselComponent},
-        {name:"collapse",url:"/collapse",component:CollapseComponent},
-        {name:"dropdown",url:"/dropdown",component:DropdownComponent},
-        {name:"modal",url:"/modal",component:ModalComponent},
-        {name:"popover",url:"/popover",component:PopoverComponent},
-        {name:"progressbar",url:"/progressbar",component:ProgressbarComponent},
-        {name:"sortable",url:"/sortable",component:SortableComponent},
-        {name:"tabs",url:"/tabs",component:TabsComponent},
-        {name:"timepicker",url:"/timepicker",component:TimepickerComponent},
-        {name:"tooltip",url:"/tooltip",component:TooltipComponent},
-        {name:"typeahead",url:"/typeahead",component:TypeaheadComponent}
+        {name:"about.alert",url:"/alert",component:AlertComponent},
+        {name:"about.accordion",url:"/accordion",component:AccordionComponent}, 
+        {name:"about.pagination",url:"/pagination",component:PaginationComponent},
+        {name:"about.rating",url:"/rating",component:RatingComponent},
+        {name:"about.button",url:"/button",component:ButtonComponent},
+        {name:"about.carousel",url:"/carousel",component:CarouselComponent},
+        {name:"about.collapse",url:"/collapse",component:CollapseComponent},
+        {name:"about.dropdown",url:"/dropdown",component:DropdownComponent},
+        {name:"about.modal",url:"/modal",component:ModalComponent},
+        {name:"about.popover",url:"/popover",component:PopoverComponent},
+        {name:"about.progressbar",url:"/progressbar",component:ProgressbarComponent},
+        {name:"about.sortable",url:"/sortable",component:SortableComponent},
+        {name:"about.tabs",url:"/tabs",component:TabsComponent},
+        {name:"about.timepicker",url:"/timepicker",component:TimepickerComponent},
+        {name:"about.tooltip",url:"/tooltip",component:TooltipComponent},
+        {name:"about.typeahead",url:"/typeahead",component:TypeaheadComponent},
+        {name:"login.logout",url:"/logout",component:LogoutComponent}
       ], useHash: false
   })],
   exports: [UIRouterModule]

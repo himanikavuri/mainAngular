@@ -9,7 +9,7 @@ import {
   AlertModule, ModalModule, BsDatepickerModule,
   PopoverModule, AccordionModule, CarouselModule, CollapseModule,
   BsDropdownModule, PaginationModule, ProgressbarModule, RatingModule, SortableModule,
-  TabsModule, TimepickerModule, TooltipModule, TypeaheadModule
+  TabsModule, TimepickerModule, TooltipModule, TypeaheadModule,
 } from 'ngx-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { AlertComponent } from './alert/alert.component';
@@ -28,6 +28,8 @@ import { TimepickerComponent } from './timepicker/timepicker.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { TypeaheadComponent } from './typeahead/typeahead.component';
 import { SortableComponent } from './sortable/sortable.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 @NgModule({
@@ -52,6 +54,8 @@ import { SortableComponent } from './sortable/sortable.component';
     TooltipComponent,
     TypeaheadComponent,
     SortableComponent,
+    DashboardComponent,
+    LogoutComponent,
  
   ],
   imports: [
@@ -73,7 +77,8 @@ import { SortableComponent } from './sortable/sortable.component';
     TabsModule.forRoot(),
     TimepickerModule.forRoot(),
     TooltipModule.forRoot(),
-    TypeaheadModule.forRoot()
+    TypeaheadModule.forRoot(),
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
