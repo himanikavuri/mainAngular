@@ -24,7 +24,7 @@ import { LogoutComponent } from './logout/logout.component';
   imports: [UIRouterModule.forRoot({
     states: [
         {name: "about.first", url: "/first", component: FirstComponent},
-        {name:"login",url:"/login",component:LoginComponent},
+        {name:"login",url:"/",component:LoginComponent},
         {name:"about",url:"/about",component:AboutComponent},
         {name:"about.alert",url:"/alert",component:AlertComponent},
         {name:"about.accordion",url:"/accordion",component:AccordionComponent}, 
